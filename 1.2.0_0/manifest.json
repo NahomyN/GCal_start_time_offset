@@ -1,0 +1,31 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon_128.png",
+         "16": "icon_16.png",
+         "32": "icon_32.png",
+         "48": "icon_48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "contentScript.js" ],
+      "matches": [ "https://calendar.google.com/calendar/*" ]
+   } ],
+   "description": "Offsets start-times by default when adding a Google Calendar event, using a user-configured number of minutes.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgldCfhAhWvj7wLfWl1O6ptDRBfOFO5lynkDG3ynlkDeFDcuUzccQG+ccOKBGZbi5aSXc7brFaKdAXRClBp62a4WOxd+e29CwvssTWH+WVu+h4GKw57eZCARKBeHoqrO2TpXN8SK8dhwP13hCZrjglUkpn/JLuPG91v9V2t2inDVvsldTXUTRsd6jfdqrDKMizEWxrMPCuhPWH28NURZGE9BOWpIjyekv3R+/SY/Qa7Wi05vIMswRKoImI3CIiOY4ZgeANu7Lfej1Wo1p6ZFmVa++btwqJEpTD7xAm8HtE/u86bPpNwQLpoeCT/6tdZROCLrY/6Yy9cMXWjVLQLStawIDAQAB",
+   "manifest_version": 3,
+   "name": "NAHOM'S Offset start-times in Google Calendar",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.0.1"
+}
