@@ -1,6 +1,7 @@
 const defaults = {
   startTimeOffsetInMinutes: 5,
-  persistDuration: false
+  persistDuration: false,
+  enabled: true
 }
 
 const handleExtensionInstalled = () => {
@@ -11,6 +12,10 @@ const handleExtensionInstalled = () => {
   chrome.storage.sync.get("persistDuration", data => {
     const persistDuration = data.persistDuration ? data.persistDuration : defaults.persistDuration
     chrome.storage.sync.set({ persistDuration })
+  })
+  chrome.storage.sync.get("enabled", data => {
+    const enabled = data.enabled !== undefined ? data.enabled : defaults.enabled
+    chrome.storage.sync.set({ enabled })
   })
 }
 
